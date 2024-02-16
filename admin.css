@@ -266,7 +266,8 @@ body {
     display: block;
 }
 
-.btn-more:hover, .dropdown:hover .btn-more {
+.btn-more:hover,
+.dropdown:hover .btn-more {
     color: var(--fontColor);
 }
 
@@ -308,4 +309,136 @@ body {
     width: 100%;
     margin: 2rem auto;
     padding: 0;
+}
+
+.detail-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.6rem 0;
+}
+
+.detail-num {
+    width: 100%;
+    text-align: right;
+}
+
+.up-down {
+    font-size: 10px;
+}
+
+.green {
+    color: #12a900;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.divider {
+    border: 1px solid var(--secondaryColor);
+    background-color: var(--secondaryColor);
+}
+
+.bottom-container {
+    width: 100%;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.table th {
+    text-align: left;
+}
+
+.table-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.table-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.btn-table {
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 2px solid var(--secondaryColor);
+    background-color: var(--secondaryColor);
+    color: var(--fontColor);
+    cursor: pointer;
+}
+
+.btn-table:hover {
+    background-color: transparent;
+    border: 2px solid var(--secondaryColor);
+}
+
+.sidebar.active {
+    width: 220px;
+}
+
+.sidebar.active .profile-image {
+    width: 120px;
+    height: 120px;
+}
+
+.sidebar.active .profile p,
+.sidebar.active .menu-detail a span {
+    display: block;
+}
+
+.sidebar.active~.main-container {
+    left: 240px;
+    width: calc(100% - 240px);
+}
+
+.sidebar.active .profile h3 {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 680px) {
+    .sidebar {
+        flex-direction: row;
+        z-index: 100;
+        background-color: black;
+        height: 60px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        top: unset;
+    }
+
+    .sidebar.active ~ .main-container {
+        left: 0%;
+        width: 100%;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .main-container {
+        left: 0;
+        width: 100%;
+    }
+
+    .right-container {
+        flex: 1;
+    }
 }
