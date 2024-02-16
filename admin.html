@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Admin Dashboard Social Media</title>
     <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="admin.js">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ninito&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/74e9527aa9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body>
@@ -71,6 +72,7 @@
         </div>
 
         <div class="main-container">
+
             <div class="left-container">
                 <div class="wrapper">
                     <div class="card-wrapper">
@@ -122,33 +124,68 @@
                                     <a href="#">Share</a>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="card">
-                                <i class="fab fa-twitter social-icon"></i>
-                                <h1 class="count">17.8M</h1>
-                                <small>Followers</small>
-                                <div class="dropdown">
-                                    <button class="btn btn-more">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="dropdown-content">
-                                        <a href="#">Details</a>
-                                        <a href="#">Download</a>
-                                        <a href="#">Share</a>
-                                    </div>
+                        <div class="card">
+                            <i class="fab fa-twitter social-icon"></i>
+                            <h1 class="count">17.8M</h1>
+                            <small>Followers</small>
+                            <div class="dropdown">
+                                <button class="btn btn-more">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Details</a>
+                                    <a href="#">Download</a>
+                                    <a href="#">Share</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="right-container">
 
                 </div>
-                <div class="bottom-container">
 
+                <div class="wrapper">
+                    <div class="card">
+                        <div class="title-wrapper">
+                            <h3 class="title">Trend Data</h3>
+                            <div class="filter">
+                                <a class="active" href="#">Day</a>
+                                <a href="#">Week</a>
+                                <a href="#">Month</a>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <div id="chLine"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="right-container">
+                <div class="card">
+                    <h3 class="title">Summary</h3>
+                    <div id="dougnut-chart"></div>
+                    <div class="chart-detail">
+                        <div class="detail-wrapper">
+                            <i class="fas fa-theater-masks"></i>
+                            <p>Impression</p>
+                            <h3 class="detail-num">3400k <span class="up-down green">+64%</span></h3>
+                        </div>
+                        <hr class="divider">
+                    </div>
                 </div>
             </div>
-        </div>
-</body>
 
+            <div class="bottom-container">
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="admin.js"></script>
 </html>
